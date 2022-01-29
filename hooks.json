@@ -1,0 +1,20 @@
+[
+    {
+        "id": "write",
+        "http-methods": ["POST"],
+        "incoming-payload-content-type": "application/json",
+        "execute-command": "/home/webhook/write-webhook.sh",
+        "command-working-directory": "/var/lib/webhook-data",
+        "pass-arguments-to-command": [
+            {
+                "source": "payload",
+                "name": "text"
+            },
+            {
+                "source": "header",
+                "name": "File-Name"
+            }
+        ],
+        "response-message": "Request processed."
+    }
+]
