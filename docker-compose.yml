@@ -5,13 +5,18 @@ services:
       context: ./webhook
     ports:
       - "9000:9000"
+    environment:
+      - PASS=supersecretpassword
     volumes:
       - "./data:/var/lib/webhook-data"
       - "./key:/home/webhook/key"
   test-client:
     build:
       context: ./test
+    environment:
+      - PASS=supersecretpassword
     volumes:
+      - "./data:/var/lib/webhook-data"
       - "./key:/key"
     depends_on:
       - webhook

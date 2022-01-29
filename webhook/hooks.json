@@ -13,8 +13,13 @@
             {
                 "source": "header",
                 "name": "File-Name"
+            },
+            {
+                "source": "header",
+                "name": "Secret"
             }
         ],
-        "response-message": "Request processed."
+        "include-command-output-in-response": true,
+        "include-command-output-in-response-on-error": true
     }
 ]

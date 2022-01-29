@@ -20,4 +20,4 @@ VOLUME /var/lib/webhook-data
 
 WORKDIR /home/webhook
 
-CMD cp /secret.key ./key && webhook-master/webhook -hooks hooks.json -verbose
+CMD cp /secret.key ./key && webhook-master/webhook -hooks hooks.json
